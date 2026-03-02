@@ -3,7 +3,6 @@ from flask import Flask, render_template, request
 from snippet_finder import search, load_snippets
 
 app = Flask(__name__)
-
 # Load documents once when server starts
 docs = load_snippets()
 
