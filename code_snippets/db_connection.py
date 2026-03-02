@@ -35,13 +35,11 @@ def fetch_students(cursor):
     cursor.execute("SELECT * FROM students")
     return cursor.fetchall()
 
-
 def close_connection(conn):
     if conn:
         conn.commit()
         conn.close()
         print("Connection closed")
-
 
 if __name__ == "__main__":
     conn, cursor = connect_database()
